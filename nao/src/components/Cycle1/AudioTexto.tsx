@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import useSpeechRecognition from '../hooks/useSpeechRecognition';
 
-const { text, isListeling, startListening, hasRecognitionSupport } = useSpeechRecognition();
 
 
 const AudioTexto = () => {
+    const { text, isListeling, startListening, stopListening, hasRecognitionSupport } = useSpeechRecognition();
+
     return (
         <div>
             {hasRecognitionSupport ? (
                 <>
                 <div>
                     <button onClick={startListening}>Empezar</button>
+                    <button onClick={stopListening}>Detener</button>
                 </div>
                 {isListeling ? <div>Escuchando...</div> : null}
                 {text}

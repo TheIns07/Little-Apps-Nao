@@ -110,7 +110,7 @@ export default function Menu() {
                   </CardActions>
                 </Card>
               </Grid>
-               {/*Breakout*/}
+               {/*Infinite scroll*/}
                <Grid item xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -149,7 +149,7 @@ export default function Menu() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Audio a Texto
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe the
@@ -157,34 +157,7 @@ export default function Menu() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href="/calculadora">Ir</Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-              {/*Text to audio*/}
-              <Grid item xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardMedia
-                    component="div"
-                    sx={{
-                      pt: '56.25%',
-                    }}
-                    image="https://source.unsplash.com/random?wallpapers"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small" href="/audiotext">Ir</Button>
                   </CardActions>
                 </Card>
               </Grid>
