@@ -12,7 +12,7 @@ const AudioTexto = () => {
                 <div>
                     <button onClick={startListening}>Empezar</button>
                 </div>
-                {isListeling ? <div>Escuchando...</div>: null}
+                {isListeling ? <div>Escuchando...</div> : null}
                 {text}
                 </>
 
