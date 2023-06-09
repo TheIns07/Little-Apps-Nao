@@ -1,47 +1,47 @@
 import InfiniteScroll from 'react-infinite-scroll-component';
 import React from 'react'
 import ReactDOM from 'react-dom';
+import { Container, Typography, Card } from '@mui/material';
 
 const style = {
     height: 30,
-    border: "1px solid green",
+    border: "1px solid blue",
     margin: 6,
     padding: 8
   };
   
 class InfiniteScrollExample extends React.Component {
     state = {
-      items: Array.from({ length: 20 })
+      items: Array.from({ length: 35 })
     };
   
     fetchMoreData = () => {
-      // a fake async api call like which sends
-      // 20 more records in 1.5 secs
       setTimeout(() => {
         this.setState({
-          items: this.state.items.concat(Array.from({ length: 20 }))
+          items: this.state.items.concat(Array.from({ length: 35 }))
         });
       }, 1500);
     };
   
     render() {
       return (
-        <div>
-          <h1>demo: react-infinite-scroll-component</h1>
-          <hr />
+        <Container  maxWidth="sm">
+         <Typography variant="h3" component="h4">
+                    Ejemplo de Infinite Scroll:
+        </Typography>
+        
           <InfiniteScroll
             dataLength={this.state.items.length}
             next={this.fetchMoreData}
             hasMore={true}
-            loader={<h4>Loading...</h4>}
+            loader={<h4>Cargando...</h4>}
           >
             {this.state.items.map((i, index) => (
-              <div style={style} key={index}>
-                div - #{index}
-              </div>
+
+                <Card variant="outlined" sx={{ maxWidth: 345 }}>Contenido de ejemplo numero {index}</Card>
             ))}
           </InfiniteScroll>
-        </div>
+        </Container>
       );
     }
   }

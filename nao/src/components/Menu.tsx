@@ -11,7 +11,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -57,7 +56,8 @@ export default function Menu() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+
+        <Container sx={{ py: 3 }} maxWidth="md">
           <Grid container spacing={4}>
             {/*Calculadora*/}
               <Grid item xs={12} sm={6} md={4}>

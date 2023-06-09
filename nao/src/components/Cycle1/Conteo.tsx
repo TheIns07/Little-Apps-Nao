@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import Countdown from 'react-countdown';
-import { Box, Container, Typography } from '@mui/material';
+import {Container, Typography } from '@mui/material';
 
 const Completionist = () =>
     <Typography variant="h1" component="h2">
